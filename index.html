@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анна Фертикова — портфолио</title>
+<meta name="description" content="Анна Фертикова — Project Manager и руководитель операционных проектов. Видеопродакшн, медиа, контент-стратегия.">
+<meta name="theme-color" content="#8a1038">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Marck+Script&family=Montserrat:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#8a1038; --wine-d:#6d0c2c; --ink:#111; --paper:#e3dfd8; --paper-2:#d8d3ca; --white:#faf8f4;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:18px;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.script{font-family:'Marck Script',cursive;font-weight:400}
+.outline{font-family:'Montserrat',sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;color:transparent;-webkit-text-stroke:2px var(--wine);letter-spacing:-.01em;line-height:.95}
+h2.sec{font-weight:500;text-transform:uppercase;color:var(--wine);font-size:clamp(28px,4vw,40px);letter-spacing:.02em;margin-bottom:28px}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(227,223,216,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .logo{font-family:'Marck Script';font-size:26px;color:var(--wine);text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none}
+nav ul a{display:block;padding:8px 14px;border-radius:99px;text-decoration:none;font-size:15px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;transition:.2s}
+nav ul a:hover,nav ul a.on{background:var(--wine);color:#fff}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 10px;transition:.25s}
+@media(max-width:820px){
+  .burger{display:block}
+  nav ul{position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--paper);padding:10px 16px 18px;border-bottom:1px solid rgba(0,0,0,.1);display:none}
+  nav ul.open{display:flex}
+}
+
+/* hero */
+.hero{padding-top:60px;min-height:100svh;display:grid;grid-template-columns:minmax(300px,36%) 1fr}
+.hero-photo{position:relative;background:var(--wine);overflow:hidden;min-height:520px}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-main{overflow:hidden;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-main .outline{font-size:clamp(46px,9vw,118px)}
+.hero-main .script{font-size:clamp(22px,3.2vw,38px);margin:6px 0 18px 4px;transform:rotate(-2deg);transform-origin:left}
+.hero-main h1{font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1.02}
+.hero-main .role{color:var(--wine);font-weight:500;font-size:clamp(18px,2.2vw,26px);margin-top:10px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:99px;font-weight:500;text-decoration:none;text-transform:uppercase;letter-spacing:.05em;font-size:15px;border:2px solid var(--wine);transition:.2s;cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--wine);color:#fff}
+.btn.fill:hover{background:var(--ink);border-color:var(--ink);transform:translateY(-2px)}
+.btn.line{background:transparent;color:var(--wine)}
+.btn.line:hover{background:var(--wine);color:#fff;transform:translateY(-2px)}
+.loops{position:absolute;pointer-events:none;opacity:.9}
+.hero .loops{right:-60px;bottom:-40px;width:340px;height:340px}
+.scroll{position:absolute;left:clamp(28px,5vw,64px);bottom:22px;font-size:13px;text-transform:uppercase;letter-spacing:.2em;opacity:.55}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-photo{min-height:0;aspect-ratio:4/4.2}
+  .scroll{display:none}
+  .hero .loops{display:none}
+}
+
+/* sections */
+section{padding:clamp(56px,8vw,100px) 0;position:relative}
+.dark{background:var(--ink);color:var(--paper)}
+.dark h2.sec{color:#fff}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.card-wine{background:var(--wine);color:#fff;border-radius:var(--r);padding:28px 32px}
+.about p+p{margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.tag{padding:8px 16px;border-radius:99px;background:var(--paper);color:var(--wine);font-weight:500;font-size:15px;text-transform:uppercase}
+.edu .tag{background:var(--white)}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+
+/* counters */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:var(--wine);color:#fff;border-radius:var(--r);padding:28px 22px;position:relative;overflow:hidden;transition:.25s}
+.stat:hover{transform:translateY(-6px) rotate(-1deg);background:var(--wine-d)}
+.stat b{display:block;font-family:'Montserrat';font-style:italic;font-weight:900;font-size:clamp(44px,6vw,72px);line-height:1}
+.stat span{display:block;margin-top:10px;font-size:16px;opacity:.92}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{border:0;font:inherit;font-weight:500;text-transform:uppercase;font-size:15px;padding:12px 22px;border-radius:99px;background:var(--paper);color:var(--wine);cursor:pointer;transition:.2s}
+.chip:hover{transform:translateY(-2px)}
+.chip.on{background:var(--wine);color:#fff}
+.skills-hint{opacity:.7;margin:0 0 18px;font-size:16px}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:20px}
+.tool{border:2px solid var(--wine);background:var(--paper);border-radius:18px;padding:16px 14px;text-align:center;font-weight:500;transition:.2s}
+.tool:hover{background:var(--wine);color:#fff;transform:translateY(-3px)}
+.dark .tool{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+.dark .tool:hover{background:var(--wine);border-color:var(--wine)}
+.dark h3{font-weight:500;text-transform:uppercase;color:#f0b9c9;font-size:18px;letter-spacing:.06em;margin:38px 0 0}
+.dark .chip{background:#242424;color:#fff}
+.dark .chip.on{background:var(--wine)}
+
+/* experience */
+.job{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.job-head{width:100%;text-align:left;background:none;border:0;font:inherit;padding:26px 30px;cursor:pointer;display:flex;gap:20px;justify-content:space-between;align-items:flex-start}
+.job-head small{display:block;color:var(--wine);font-weight:500;letter-spacing:.05em;text-transform:uppercase;font-size:14px}
+.job-head h3{font-weight:600;font-size:clamp(20px,2.4vw,26px);line-height:1.25;margin:4px 0 6px}
+.job-head p{opacity:.8}
+.plus{flex:none;width:44px;height:44px;border-radius:50%;background:var(--wine);color:#fff;display:grid;place-items:center;font-size:26px;transition:.3s}
+.job.open .plus{transform:rotate(45deg)}
+.job-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.job.open .job-body{grid-template-rows:1fr}
+.job-body>div{overflow:hidden}
+.job ul{list-style:none;padding:0 30px 30px;display:grid;gap:12px}
+.job li{padding:14px 18px;border-radius:14px;background:var(--paper);border-left:5px solid var(--wine);transition:.3s}
+.job li.dim{opacity:.28}
+.job li.hit{background:var(--wine);color:#fff}
+
+/* works */
+.filters{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.works{columns:3;column-gap:18px}
+.work{display:block;width:100%;margin:0 0 18px;break-inside:avoid;position:relative;border-radius:var(--r);overflow:hidden;background:#222;cursor:pointer;border:0;padding:0;color:#fff;text-align:left;font:inherit;transition:transform .3s}
+.work:hover{transform:translateY(-6px)}
+.work img{width:100%;height:auto}
+.work .cap{position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-size:15px;font-weight:500}
+.work .cap em{display:block;font-style:normal;color:#f0b9c9;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.work.hide{display:none}
+.play{position:absolute;top:50%;left:50%;width:84px;height:84px;margin:-42px;border-radius:50%;background:var(--wine);display:grid;place-items:center;transition:.25s}
+.work:hover .play{transform:scale(1.12)}
+.play::after{content:"";border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:7px}
+@media(max-width:900px){.works{columns:2}}
+@media(max-width:520px){.works{columns:1}}
+.vid-wrap{margin-top:0}
+.note{opacity:.7;font-size:15px;margin-top:20px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.93);z-index:100;display:none;place-items:center;padding:20px}
+.lb.on{display:grid}
+.lb-in{max-width:min(1100px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lb img,.lb video{max-width:100%;max-height:82vh;border-radius:14px;background:#000}
+.lb p{color:#fff;font-size:16px;text-align:center}
+.lb button{position:absolute;background:var(--wine);color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:26px;cursor:pointer}
+.lb .x{top:16px;right:16px}.lb .pv{left:14px;top:50%}.lb .nx{right:14px;top:50%}
+
+/* education + contacts */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:820px){.edu{grid-template-columns:1fr}}
+.contacts{background:var(--wine);color:#fff;overflow:hidden}
+.contacts .outline{-webkit-text-stroke:2px #fff;font-size:clamp(44px,9vw,120px)}
+.contacts .script{font-size:clamp(22px,3vw,34px);margin:6px 0 30px}
+.links{display:flex;flex-wrap:wrap;gap:14px}
+.contacts .btn{border-color:#fff}
+.contacts .btn.fill{background:#fff;color:var(--wine)}
+.contacts .btn.fill:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.contacts .btn.line{color:#fff}
+.contacts .btn.line:hover{background:#fff;color:var(--wine)}
+.contacts .loops{right:-80px;top:-40px;width:420px;height:420px;opacity:.35}
+footer{background:var(--ink);color:#9a958c;padding:22px 0;font-size:14px;text-align:center}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,40px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:99px;opacity:0;transition:.3s;z-index:120;font-size:15px}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s, transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="loops" viewBox="0 0 400 400">
+      <g fill="none" stroke="#111" stroke-width="14" stroke-linecap="round">
+        <path d="M20 330C80 380 150 330 120 270S40 190 120 150s160 40 120-40-100-70-60-100 140 30 120 110-120 110-70 170 130 20 150-40"/>
+        <path d="M40 60c60-40 120 10 90 60s-100 60-60 110 130 10 150-30"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Анна Фертикова</a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+    <ul id="menu">
+      <li><a href="#about">О себе</a></li>
+      <li><a href="#skills">Навыки</a></li>
+      <li><a href="#exp">Опыт</a></li>
+      <li><a href="#works">Работы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-photo">
+    <img src="assets/anna.jpg" alt="Анна Фертикова" width="676" height="940">
+  </div>
+  <div class="hero-main">
+    <div class="outline">Портфолио</div>
+    <div class="script">Project Manager &amp; Руководитель проектов</div>
+    <h1>Фертикова Анна</h1>
+    <p class="role">Project Manager &amp; Руководитель операционных проектов</p>
+    <div class="hero-cta">
+      <a class="btn fill" href="#works">Смотреть работы</a>
+      <a class="btn line" href="https://t.me/Cjmoft228" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <svg class="loops" aria-hidden="true"><use href="#loops"/></svg>
+    <div class="scroll">листайте ↓</div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="rv">
+      <h2 class="sec">О себе</h2>
+      <p>Управленец и продюсер в сфере медиа и контента с опытом работы в крупных федеральных проектах и патриотических объединениях.</p>
+      <p>Специализируюсь на полном цикле видеопродакшна и стратегическом планировании контента, обеспечивая бесшовную интеграцию креативных подходов и операционных задач.</p>
+      <p>Имею сильные навыки интервьюирования, работы со спикерами и управления распределёнными творческими командами.</p>
+      <p>Владею компетенциями в документальном кино и студийном производстве, сочетая глубокое погружение в контекст с быстрым постпродакшном под современные digital-форматы.</p>
+    </div>
+    <div class="card-wine rv">
+      <div class="script" style="font-size:30px;margin-bottom:14px">Коротко</div>
+      <div class="tags">
+        <span class="tag">Продюсирование</span><span class="tag">Видеопродакшн</span><span class="tag">Команды</span><span class="tag">Документалистика</span><span class="tag">Digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="stats" id="stats">
+      <div class="stat rv"><b data-n="5">0</b><span>стажёров без опыта собрала в боеспособную медиакоманду</span></div>
+      <div class="stat rv"><b data-n="3">0</b><span>недели, и команда полностью закрывает потребности каналов</span></div>
+      <div class="stat rv"><b data-n="500" data-plus="1">0</b><span>человек на масс-ивентах, которые она продюсировала</span></div>
+      <div class="stat rv"><b data-n="2">0</b><span>съёмочные группы под одновременным контролем</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="dark">
+  <div class="wrap">
+    <h2 class="sec rv">Навыки и инструменты</h2>
+    <p class="skills-hint">Нажмите на навык, и в разделе «Опыт» подсветится, где он применялся.</p>
+    <div class="chips" id="chips">
+      <button class="chip" data-k="team">Координация проектов</button>
+      <button class="chip" data-k="plan">Стратегическое планирование</button>
+      <button class="chip" data-k="team">Наставничество</button>
+      <button class="chip" data-k="prod">Видеопродакшн полного цикла</button>
+      <button class="chip" data-k="prod">Режиссура и операторская работа</button>
+      <button class="chip" data-k="prod">Интервьюирование и работа со спикерами</button>
+      <button class="chip" data-k="text">Сценарное мастерство и фактчекинг</button>
+      <button class="chip" data-k="text">Креативный копирайтинг и аудиоконтент</button>
+      <button class="chip" data-k="plan">Контент-стратегия и SMM</button>
+      <button class="chip" data-k="post">Быстрый постпродакшн</button>
+      <button class="chip" data-k="prod">Студийное производство</button>
+    </div>
+    <h3>Digital и инструменты</h3>
+    <div class="tools">
+      <div class="tool">DaVinci Resolve</div><div class="tool">CapCut</div><div class="tool">Adobe Premiere Pro</div><div class="tool">Final Cut Pro</div>
+      <div class="tool">Microsoft Excel</div><div class="tool">Microsoft Word</div><div class="tool">Microsoft PowerPoint</div><div class="tool">Google Docs</div>
+      <div class="tool">Figma</div><div class="tool">DeepSeek / ChatGPT</div>
+    </div>
+  </div>
+</section>
+
+<section id="exp">
+  <div class="wrap">
+    <h2 class="sec rv">Опыт работы</h2>
+    <div class="job open rv" id="job">
+      <button class="job-head" aria-expanded="true">
+        <div>
+          <small>Март 2026 — Июнь 2026</small>
+          <h3>Федеральная программа развития молодёжного предпринимательства «Я в деле»</h3>
+          <p>Сотрудник медиаотдела программы · Руководитель направления «Съёмка и монтаж»</p>
+        </div>
+        <span class="plus">+</span>
+      </button>
+      <div class="job-body"><div>
+        <ul>
+          <li data-k="team plan">В короткий срок сформировала боеспособную медиакоманду из 5 стажёров без опыта.</li>
+          <li data-k="team post prod">Провела обучение под ключ, внедрила систему контроля качества, что позволило команде полностью закрывать потребности каналов уже через 3 недели.</li>
+          <li data-k="plan">Разработала и внедрила ежемесячный контент-план, синхронизировала его с календарём мероприятий программы.</li>
+          <li data-k="prod post team">Продюсировала съёмки на масс-ивентах (до <b>500</b> чел.), контролируя работу 2 съёмочных групп одновременно и обеспечивая быстрый постпродакшн.</li>
+          <li data-k="text">Самостоятельно писала продающие и репортажные посты, совмещая функции креатора и редактора для непрерывного цикла производства контента.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="dark">
+  <div class="wrap">
+    <h2 class="sec rv">Работы</h2>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">Все</button>
+      <button class="chip" data-f="film">Кино и видео</button>
+      <button class="chip" data-f="design">Дизайн</button>
+    </div>
+    <div class="works" id="grid">
+      <button class="work" data-t="film" data-type="video" data-src="assets/video.mp4" data-cap="Итоговый ролик «2025 is over» · программа «Я в деле»">
+        <img src="assets/poster.jpg" alt="Видеоролик «2025 is over»" loading="lazy">
+        <span class="play"></span>
+        <span class="cap"><em>Кино · видео · монтаж</em>«2025 is over» — итоговый ролик программы</span>
+      </button>
+      <button class="work" data-t="design" data-type="img" data-src="assets/work-resume.jpg" data-cap="Дизайн резюме · вёрстка в Figma, фирменный стиль с рукописными акцентами">
+        <img src="assets/work-resume.jpg" alt="Дизайн резюме" loading="lazy">
+        <span class="cap"><em>Дизайн · резюме</em>Резюме в едином стиле</span>
+      </button>
+      <button class="work" data-t="design" data-type="img" data-src="assets/work-1.jpg" data-cap="Интерактивный пост-головоломка «Что ждёт тебя в 9 сезоне?»">
+        <img src="assets/work-1.jpg" alt="Пост «Что ждёт тебя в 9 сезоне»" loading="lazy">
+        <span class="cap"><em>Дизайн · SMM</em>Пост «Что ждёт в 9 сезоне?»</span>
+      </button>
+      <button class="work" data-t="design" data-type="img" data-src="assets/work-2.jpg" data-cap="Обложка подборки «6 фильмов, которые заставят вас действовать»">
+        <img src="assets/work-2.jpg" alt="Подборка фильмов" loading="lazy">
+        <span class="cap"><em>Дизайн · кино</em>Подборка «6 фильмов»</span>
+      </button>
+      <button class="work" data-t="design" data-type="img" data-src="assets/work-3.jpg" data-cap="Карточка карусели «Миф или правда?» о наставничестве">
+        <img src="assets/work-3.jpg" alt="Карточка «Миф и правда»" loading="lazy">
+        <span class="cap"><em>Дизайн · SMM</em>Карусель «Миф или правда?»</span>
+      </button>
+      <button class="work" data-t="design" data-type="img" data-src="assets/work-4.jpg" data-cap="Обложка карусели «Миф или правда? Познакомимся ближе с программой»">
+        <img src="assets/work-4.jpg" alt="Обложка карусели" loading="lazy">
+        <span class="cap"><em>Дизайн · SMM</em>Обложка карусели</span>
+      </button>
+    </div>
+    <p class="note">Нажмите на работу, чтобы открыть крупно. Стрелки на клавиатуре листают галерею.</p>
+  </div>
+</section>
+
+<section id="edu">
+  <div class="wrap edu">
+    <div class="rv">
+      <h2 class="sec">Образование</h2>
+      <div class="card-wine">
+        <p><b>АНО ВО «Институт кино и телевидения (ГИТР)»</b></p>
+        <p>Факультет журналистики</p>
+        <p>Образовательная программа «Журналистика»</p>
+        <p class="script" style="font-size:28px;margin-top:10px">4 курс</p>
+      </div>
+    </div>
+    <div class="rv">
+      <h2 class="sec">Компетенции</h2>
+      <div class="tags">
+        <span class="tag">Документальное кино</span><span class="tag">Студийное производство</span><span class="tag">Интервью</span><span class="tag">Digital-форматы</span><span class="tag">Работа со спикерами</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="contacts">
+  <svg class="loops" aria-hidden="true" style="filter:invert(1)"><use href="#loops"/></svg>
+  <div class="wrap" style="position:relative">
+    <div class="outline">Контакты</div>
+    <div class="script">Давайте сделаем что-нибудь вместе</div>
+    <div class="links">
+      <a class="btn fill" href="https://t.me/Cjmoft228" target="_blank" rel="noopener">Telegram · @Cjmoft228</a>
+      <a class="btn line" href="mailto:anfertikr@gmail.com">anfertikr@gmail.com</a>
+      <button class="btn line" id="copy" type="button">Скопировать почту</button>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Анна Фертикова</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" aria-label="Закрыть">×</button>
+  <button class="pv" aria-label="Назад">‹</button>
+  <button class="nx" aria-label="Вперёд">›</button>
+  <div class="lb-in"><div id="lb-media"></div><p id="lb-cap"></p></div>
+</div>
+<div class="toast" id="toast">Почта скопирована</div>
+
+<script>
+(function(){
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+
+  // mobile menu
+  const burger=$('.burger'), menu=$('#menu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  $$('#menu a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0,rootMargin:'0px 0px -5% 0px'});
+  $$('.rv').forEach(el=>io.observe(el));
+
+  // counters
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return; cio.unobserve(e.target);
+    const n=+e.target.dataset.n, plus=e.target.dataset.plus, t0=performance.now(), d=1400;
+    (function tick(t){const p=Math.min(1,(t-t0)/d), v=Math.round(n*(1-Math.pow(1-p,3)));
+      e.target.textContent=(plus&&p>=1?'до ':'')+v; if(p<1)requestAnimationFrame(tick)})(t0);
+  }),{threshold:.6});
+  $$('.stat b').forEach(b=>cio.observe(b));
+
+  // nav highlight
+  const links=$$('#menu a'), secs=links.map(a=>$(a.getAttribute('href')));
+  addEventListener('scroll',()=>{
+    const y=scrollY+120; let cur=-1; secs.forEach((s,i)=>{if(s&&s.offsetTop<=y)cur=i});
+    links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+  },{passive:true});
+
+  // accordion
+  const job=$('#job'), head=$('.job-head',job);
+  head.addEventListener('click',()=>{const o=job.classList.toggle('open');head.setAttribute('aria-expanded',o)});
+
+  // skill highlight
+  let active=null;
+  $$('#chips .chip').forEach(c=>c.addEventListener('click',()=>{
+    const on=active===c; $$('#chips .chip').forEach(x=>x.classList.remove('on'));
+    active=on?null:c; if(active)c.classList.add('on');
+    job.classList.add('open'); head.setAttribute('aria-expanded','true');
+    $$('li',job).forEach(li=>{
+      if(!active){li.classList.remove('dim','hit');return}
+      const hit=li.dataset.k.split(' ').includes(c.dataset.k);
+      li.classList.toggle('hit',hit); li.classList.toggle('dim',!hit);
+    });
+    if(active)$('#exp').scrollIntoView({behavior:'smooth'});
+  }));
+
+  // filters
+  $$('#filters .chip').forEach(b=>b.addEventListener('click',()=>{
+    $$('#filters .chip').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    const f=b.dataset.f; $$('.work').forEach(w=>w.classList.toggle('hide',f!=='all'&&w.dataset.t!==f));
+  }));
+
+  // lightbox
+  const lb=$('#lb'), media=$('#lb-media'), cap=$('#lb-cap'); let idx=0, list=[];
+  function show(i){
+    list=$$('.work').filter(w=>!w.classList.contains('hide')); idx=(i+list.length)%list.length;
+    const w=list[idx]; media.innerHTML='';
+    let el;
+    if(w.dataset.type==='video'){el=document.createElement('video');el.controls=true;el.autoplay=true;el.playsInline=true;el.poster='assets/poster.jpg';el.src=w.dataset.src}
+    else{el=document.createElement('img');el.src=w.dataset.src;el.alt=w.dataset.cap}
+    media.appendChild(el); cap.textContent=w.dataset.cap; lb.classList.add('on'); document.body.style.overflow='hidden';
+  }
+  function close(){lb.classList.remove('on');media.innerHTML='';document.body.style.overflow=''}
+  $$('.work').forEach(w=>w.addEventListener('click',()=>{list=$$('.work').filter(x=>!x.classList.contains('hide'));show(list.indexOf(w))}));
+  $('.x',lb).onclick=close; $('.pv',lb).onclick=()=>show(idx-1); $('.nx',lb).onclick=()=>show(idx+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;
+    if(e.key==='Escape')close(); if(e.key==='ArrowLeft')show(idx-1); if(e.key==='ArrowRight')show(idx+1)});
+
+  // copy email
+  $('#copy').addEventListener('click',()=>{
+    const t=$('#toast'), done=()=>{t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800)};
+    (navigator.clipboard?navigator.clipboard.writeText('anfertikr@gmail.com'):Promise.reject()).then(done).catch(()=>{
+      const a=document.createElement('textarea');a.value='anfertikr@gmail.com';document.body.appendChild(a);a.select();
+      try{document.execCommand('copy')}catch(e){} a.remove();done()});
+  });
+})();
+</script>
+</body>
+</html>
